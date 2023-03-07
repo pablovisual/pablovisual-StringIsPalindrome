@@ -1,3 +1,4 @@
+import java.util.*;
 
 public class Palindrome {
     /**
@@ -11,7 +12,21 @@ public class Palindrome {
      * @param str A String.
      * @return true if str is a palindrome, false otherwise.
      */
-    public boolean pal(String str){
-        return false;
+    public boolean pal(String str) {
+        Deque<Character> reverseStr = new LinkedList<>();
+
+        for(int index = str.length() - 1; index >= 0; --index) {
+            reverseStr.add(str.charAt(index));
+        }
+
+        for(int idx = 0; idx < str.length(); ++idx) {
+            if(reverseStr.peek() != str.charAt(idx)) {
+                return false;
+            }
+
+            reverseStr.pollFirst();
+        }
+
+        return true;
     }
 }
