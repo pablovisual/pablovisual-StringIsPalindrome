@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Palindrome {
-    /**
+    /*
      * Palindromes are words that are the same forwards as they are backwards - eg, 'bob', 'racecar'.
      *
      * You can solve this problem in several ways:
